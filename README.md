@@ -10,7 +10,7 @@ Fruit quest is an game application created using a Ruby on Rails backend and Rea
 ## Installation
 1. Fork and clone this frontend repository and navigate into the directory where you cloned the repository.
 2. Enter the command "npm install" in the terminal.
-3. Fork and clone backend repository from [here](https://github.com/iona-b/mod-4-project-backend). Navigate to the backend folder.
+3. Fork and clone backend repository from [here](https://github.com/carcarvroom/fruit-quest-backend). Navigate to the backend folder.
 4. Enter the command 'bundle install' in the terminal.
 5. Run "rails db:migrate" in the terminal.
 6. For testing data, in the ../db/seeds.rb file, uncomment the test data, and run "rails db:seed" in the terminal.

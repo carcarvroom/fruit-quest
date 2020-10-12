@@ -17,7 +17,7 @@ class App extends React.Component {
 
   fetchScores = async () => {
     try {
-      let res = await fetch('http://localhost:3000/users')
+      let res = await fetch('https://fruit-quest-api.herokuapp.com/users')
       let json = await res.json()
       let userTotals = json.map(user=> {
         let userScores = user.scores.map(eachScore => eachScore.score)
@@ -42,7 +42,7 @@ class App extends React.Component {
   handleLogin = (event, userDetails) => {
     event.preventDefault()
 
-    fetch('http://localhost:3000/login',{
+    fetch('https://fruit-quest-api.herokuapp.com/login',{
      method:"POST",
      headers:{
        'Content-Type':'application/json'
@@ -67,7 +67,7 @@ class App extends React.Component {
   handleSignUp = (event, userDetails) => {
    event.preventDefault()
    console.log(this.state.user)
-    fetch('http://localhost:3000/users', {
+    fetch('https://fruit-quest-api.herokuapp.com/users', {
       method: 'POST',
       headers: {
         'Content-Type':'application/json',
@@ -90,7 +90,7 @@ class App extends React.Component {
   }
 
   deleteProfile = () => {
-    fetch(`http://localhost:3000/users/${this.state.user.id}`, {
+    fetch(`https://fruit-quest-api.herokuapp.com/users/${this.state.user.id}`, {
       method: 'DELETE',
     })
       .then(res => res.json())
@@ -118,7 +118,7 @@ class App extends React.Component {
   }
 
   updateUser = () => {
-    fetch(`http://localhost:3000/users/${this.state.user.id}`)
+    fetch(`https://fruit-quest-api.herokuapp.com/users/${this.state.user.id}`)
       .then(res => res.json())
       .then(json => {
         this.setState ({

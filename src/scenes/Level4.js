@@ -114,7 +114,7 @@ class Level4 extends Phaser.Scene {
                 body: JSON.stringify({
                     score: this.fruitScore,
                     user_id: userId,
-                    level_id: 9
+                    level_id: 7
                 })
             })
             .then(res => res.json())
@@ -125,7 +125,7 @@ class Level4 extends Phaser.Scene {
                     .then(res => res.json())
                     .then(json => {
                         console.log(json)
-                        let scoreId = json.find(score => score.user_id == userId && score.level_id == 9).id
+                        let scoreId = json.find(score => score.user_id == userId && score.level_id == 7).id
                         fetch(`http://localhost:3000/scores/${scoreId}`, {
                             method: 'PATCH',
                             headers: {

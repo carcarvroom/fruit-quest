@@ -118,7 +118,7 @@ class Level3 extends Phaser.Scene {
               body: JSON.stringify({
                   score: this.fruitScore,
                   user_id: userId,
-                  level_id: 8
+                  level_id: 6
               })
           })
           .then(res => res.json())
@@ -128,7 +128,7 @@ class Level3 extends Phaser.Scene {
                   fetch('http://localhost:3000/scores')
                   .then(res => res.json())
                   .then(json => {
-                      let scoreId = json.find(score => score.user_id == userId && score.level_id == 8).id
+                      let scoreId = json.find(score => score.user_id == userId && score.level_id == 6).id
                       fetch(`http://localhost:3000/scores/${scoreId}`, {
                           method: 'PATCH',
                           headers: {
@@ -139,12 +139,12 @@ class Level3 extends Phaser.Scene {
                               score: this.fruitScore
                           })
                       })
-                      .catch(err => console.log('Level4.js Score Patch Error:', err))
+                      .catch(err => console.log('Level3.js Score Patch Error:', err))
                   })
-                  .catch( err => console.log('Level4.js Score Fetch Error:', err))
+                  .catch( err => console.log('Level3.js Score Fetch Error:', err))
               } 
           })
-          .catch(err => console.log('Level4.js Score Post Error:', err))
+          .catch(err => console.log('Level3.js Score Post Error:', err))
       }
     }
 

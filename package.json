@@ -2,6 +2,10 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "npm": "6.14.5",
+    "node": "14.3.0"
+  },
   "dependencies": {
     "@ion-phaser/react": "^1.2.2",
     "@testing-library/jest-dom": "^4.2.4",

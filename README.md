@@ -41,10 +41,12 @@ Fruit quest is an game application created using a Ruby on Rails backend and Rea
 
 **Carly La**<br>
 https://github.com/carcarvroom
+
 https://www.linkedin.com/in/carlyla/
 
 **Iona Brabender**<br>
 https://github.com/iona-b
+
 https://www.linkedin.com/in/iona-brabender/
 
 **Sprites**<br>
